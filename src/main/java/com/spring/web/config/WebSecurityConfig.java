@@ -19,7 +19,7 @@ import com.spring.web.jwt.AuthTokenFilter;
 import com.spring.web.service.UserDetailsServiceImpl;
 
 
-@Configuration
+@Configuration	
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
     // securedEnabled = true,
