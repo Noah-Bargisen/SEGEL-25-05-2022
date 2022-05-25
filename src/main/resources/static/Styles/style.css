@@ -66,9 +66,7 @@ body {
       border-color: lightblue;
       height: 125px;
       border-radius: 50px;  
-      margin-right: 1%;
-      margin-left: 2%;
-      width:23%;
+    
       
   }
 
@@ -77,8 +75,6 @@ body {
       border-color: lightgreen;
       height: 125px;
       border-radius: 50px;  
-      margin-right: 1%;
-      width:23%; 
   }
 
     #field3{
@@ -86,8 +82,6 @@ body {
       border-color: pink;
       height: 125px;
       border-radius: 50px; 
-      margin-right: 1%;
-      width:23%;  
   }
 
     #field4{
@@ -95,8 +89,6 @@ body {
       border-color: gold;
       height: 125px;
       border-radius: 50px;   
-      margin-right: 1%;
-      width:23%;
   }
 
   .dash{
