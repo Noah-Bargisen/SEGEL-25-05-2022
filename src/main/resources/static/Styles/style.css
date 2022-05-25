@@ -127,10 +127,17 @@ body {
   float:right;
 }
 
-.graphic{
+        .piechart {
+            margin-top: 95px;
+            display: block;
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-image: conic-gradient(
+                green 70deg, 
+                lightblue 0 235deg, 
+                lightgreen 0);
+        }
   
-}
-
-.graphic2{
-
-}
+       
