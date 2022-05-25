@@ -1,10 +1,12 @@
 package com.spring.web.controller;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -119,14 +121,16 @@ public class AuthController {
 
     user.setRoles(roles);
     userRepository.save(user);
-
+    
     return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
   }
 
   @PostMapping("/signout")
-  public ResponseEntity<?> logoutUser() {
+  public ResponseEntity<?> logoutUser() throws IOException {
     ResponseCookie cookie = jwtUtils.getCleanJwtCookie();
     return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString())
         .body(new MessageResponse("You've been signed out!"));
+	  
+	  
   }
 }

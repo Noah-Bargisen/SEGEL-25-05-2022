@@ -16,7 +16,20 @@ public class WebController {
 		ModelAndView mav = new ModelAndView("../index.html");
 		return mav;	
 	}
-
+	
+	@GetMapping("/")
+	public ModelAndView allAccessHome() {
+		ModelAndView mav = new ModelAndView("../index.html");
+		return mav;	
+	}
+	
+	@GetMapping("/error")
+	public ModelAndView errorPage() {
+		ModelAndView mav = new ModelAndView("../accessDenied.html");
+		return mav;	
+	}
+	
+	
 	@GetMapping("/admin")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public String adminAccess() {
